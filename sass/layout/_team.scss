@@ -1,0 +1,58 @@
+/* Наша команда */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $background-color-section;
+    min-width: 100%;
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-card {
+        width: calc((100% - 90px) / 4);
+        border-radius: 0px 0px 4px 4px;
+        background-color: $white-color;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    }
+
+    & h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.187;
+        text-align: center;
+        color: $primary-title-color;
+    }
+
+    & p {
+        margin-top: 0;
+        margin-bottom: 16px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.187;
+        text-align: center;
+        color: $primary-text-color;
+    }
+}
+
+
+
+
+.team-list .team-card:not(:nth-child(4n)) {
+    margin-right: 30px;
+}
+
+.team-main-info {
+    padding-top: 30px;
+    padding-bottom: 24px;
+}
+
+
+
+

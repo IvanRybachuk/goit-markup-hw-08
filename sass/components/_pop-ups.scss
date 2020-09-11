@@ -1,0 +1,52 @@
+.backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 250ms ease;
+    transition-delay: 0s;
+}
+
+.modal {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden auto;
+    padding: 20px 0;
+    display: flex;
+}
+
+.modal-form-box {
+    border-radius: 4px;
+    padding: 40px;
+    width: 528px;
+    background-color: $white-color;
+    position: relative;
+    width: 528px;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    transition: all .4s ease;
+    transform: rotate(0) scale(1) translate(0); 
+    transition-delay: .5s;
+}
+
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: .25s;
+}
+
+.is-hidden .modal-form-box {
+    transform: rotate(400deg) scale(0) translate(400%);
+    transition-delay: 0s;
+}
+
+
+
+
