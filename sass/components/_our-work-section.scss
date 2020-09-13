@@ -1,0 +1,43 @@
+input,
+textarea {
+  outline: 0 !important;
+}
+
+.no-visible {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.our-work {
+  @extend %list;
+  display: flex;
+
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .item {
+    position: relative;
+  }
+
+  .title {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    margin: 0;
+    padding: 27px 0px;
+    text-align: center;
+    min-width: 370px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: $white;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

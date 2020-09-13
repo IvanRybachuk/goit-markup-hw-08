@@ -1,0 +1,47 @@
+.footer {
+  background-color: $footer-bcg-color;
+
+  &-content {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      padding: 60px 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      text-align: center;
+      padding: 60px;
+
+      .footer-contacts {
+        display: block;
+        margin-right: 165px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      text-align: left;
+      padding: 60px 15px;
+
+      .footer-contacts {
+        margin-right: 0;
+      }
+    }
+  }
+
+  b {
+    display: block;
+
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    color: $white;
+  }
+}

@@ -1,0 +1,71 @@
+.page {
+  background-color: $white;
+  color: $primary-text-color;
+
+  font-family: $main-font;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  @media screen and (max-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+
+    color: $primary-text-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 1.16;
+    }
+  }
+}
