@@ -542,7 +542,7 @@ img {
   display: block;
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -813,51 +813,16 @@ img {
 }
 
 .modal {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  background-color: #ffffff;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (max-width: 767px) {
-  .modal {
-    position: absolute;
-    width: 450px;
-    padding: 40px;
-    height: 609px;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 450px;
-    height: 609px;
-    padding: 40px;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .modal {
-    height: 581px;
-    padding: 40px;
-    width: 528px;
-  }
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden auto;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .modal-form-box {
@@ -893,15 +858,13 @@ img {
 }
 
 .btn-modal {
-  outline: none;
+  color: black;
   width: 30px;
   height: 30px;
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 50%;
-  cursor: pointer;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -916,7 +879,6 @@ img {
           align-items: center;
   margin: 0;
   padding: 0;
-  color: #212121;
 }
 
 .btn-modal:hover {
@@ -928,7 +890,6 @@ img {
 }
 
 .section-title-top {
-  text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 20px;
@@ -954,7 +915,6 @@ img {
 }
 
 .modal-title-box {
-  max-width: 448px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1033,11 +993,11 @@ img {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.03em;
+  border-bottom: 2px solid var --accept-color;
   color: #2196f3;
-  overflow: hidden;
 }
 
 .accept-text-desc-label {
@@ -1052,7 +1012,6 @@ img {
 
 @media screen and (min-width: 480px) {
   .accept-text-desc-label {
-    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1061,8 +1020,8 @@ img {
 
 @media screen and (max-width: 1199px) {
   .accept-text-desc-label {
-    font-size: 14px;
-    line-height: 1.1;
+    font-size: 12px;
+    line-height: 1.1666;
   }
 }
 
@@ -1074,19 +1033,20 @@ img {
 }
 
 .confirmation {
-  white-space: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
 }
 
 .confirmation-title {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -1096,9 +1056,17 @@ img {
   color: #757575;
 }
 
+.confirmation::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background: url(../images/vector-box.svg);
+  margin-right: 7px;
+}
+
 @media screen and (min-width: 480px) {
   .confirmation-title {
-    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1107,17 +1075,17 @@ img {
 
 @media screen and (max-width: 1199px) {
   .confirmation-title {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.1666;
   }
 }
 
-.confirmation::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  background: url(../images/vector-box.svg);
-  margin-right: 8px;
+.confirmation-title {
+  display: inline;
+}
+
+.accept-text-desc {
+  display: inline;
 }
 
 .icon-form-input {
@@ -1140,22 +1108,14 @@ img {
   position: relative;
 }
 
-.modal-form-field:not(:last-child) {
+.modal-form-field:not(:nth-child(6)) {
   margin-bottom: 28px;
   position: relative;
 }
 
-.modal-title-box {
-  margin-bottom: 30px;
-}
-
 .modal-form-confirmation {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -1169,16 +1129,26 @@ img {
   color: #2196f3;
 }
 
-input[type=checkbox] {
-  display: none;
-}
-
 .contact-form-input:checked + .confirmation::before {
+  width: 16px;
+  height: 15px;
+  display: inline-block;
   background-image: url(../images/icon-check.svg);
 }
 
 .contact-form-input:checked + .confirmation .confirmation-title {
   color: #2196f3;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -1616,6 +1586,9 @@ textarea {
 }
 
 .footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   background-color: #2f303a;
 }
 
@@ -1672,6 +1645,22 @@ textarea {
   line-height: 1.1;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 .contacts {
