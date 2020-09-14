@@ -1033,7 +1033,7 @@ img {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.1666;
   letter-spacing: 0.03em;
   color: #2196f3;
@@ -1061,7 +1061,7 @@ img {
 
 @media screen and (max-width: 1199px) {
   .accept-text-desc-label {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.1;
   }
 }
