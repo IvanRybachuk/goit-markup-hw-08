@@ -1036,33 +1036,45 @@ img {
   font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.03em;
-  border-bottom: 2px solid #2196f3;
   color: #2196f3;
+  overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
-  .accept-text-desc {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+.accept-text-desc-label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .accept-text-desc-label {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .accept-text-desc-label {
     font-size: 12px;
-    line-height: 1.1666;
-    letter-spacing: 0.03em;
+    line-height: 1.1;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .accept-text-desc {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+  .accept-text-desc-label {
     font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.03em;
+    line-height: 1.7;
   }
 }
 
 .confirmation {
+  white-space: nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1072,6 +1084,9 @@ img {
 }
 
 .confirmation-title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -1079,6 +1094,22 @@ img {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 480px) {
+  .confirmation-title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .confirmation-title {
+    font-size: 14px;
+    line-height: 1.1666;
+  }
 }
 
 .confirmation::before {
@@ -1119,6 +1150,12 @@ img {
 }
 
 .modal-form-confirmation {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
 }
 
@@ -1142,38 +1179,6 @@ input[type=checkbox] {
 
 .contact-form-input:checked + .confirmation .confirmation-title {
   color: #2196f3;
-}
-
-.contact-form-input:checked + .confirmation .confirmation-title .confirmation-title {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 1199px) {
-  .contact-form-input:checked + .confirmation .confirmation-title .confirmation-title {
-    font-size: 12px;
-    line-height: 1.1666;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contact-form-input:checked + .confirmation .confirmation-title .confirmation-title {
-    font-size: 14px;
-    line-height: 1.1666;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .contact-form-input:checked + .confirmation .confirmation-title .confirmation-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 }
 
 @media screen and (min-width: 768px) {
