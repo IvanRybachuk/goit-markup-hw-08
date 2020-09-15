@@ -1033,8 +1033,6 @@ img {
 }
 
 .confirmation {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1057,6 +1055,9 @@ img {
 }
 
 .confirmation::before {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  vertical-align: middle;
   content: "";
   display: inline-block;
   width: 16px;
