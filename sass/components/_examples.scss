@@ -110,6 +110,7 @@
 }
 
 .examples-text {
+ 
   position: absolute;
   top: 0;
   left: 0;
@@ -132,4 +133,10 @@
   .examples .item:focus & {
     transform: translateY(0);
   }
-}
+   @media screen and (max-width: 450px) {
+     padding: 20px;
+      overflow: scroll;
+   }
+ }
+
+

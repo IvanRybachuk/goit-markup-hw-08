@@ -1586,6 +1586,13 @@ textarea {
           transform: translateY(0);
 }
 
+@media screen and (max-width: 450px) {
+  .examples-text {
+    padding: 20px;
+    overflow: scroll;
+  }
+}
+
 .footer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
